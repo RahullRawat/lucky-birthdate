@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: #f87171;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+.container {
+	width: 30%;
+	margin: auto;
+	background-color: #f87171;
+	margin-top: 4rem;
+	padding: 2rem;
+}
+
+.container h1 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.container label {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+
+.container input {
+	padding: 0.5rem;
+	outline: none;
+	border: none;
+}
+
+label,
+input {
+	display: block;
+	width: 60%;
+	margin: auto;
+}
+
+#date-of-birth,
+#lucky-number {
+	font-size: 16px;
+	font-family: inherit;
+	margin-bottom: 2.5rem;
+}
+
+#check-button {
+	display: block;
+	margin: auto;
+	font-size: 16px;
+	font-family: inherit;
+	font-weight: 600;
+	padding: 0.6rem 1.6rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: var(--primary-color);
+	background-color: white;
+}
+
+#privacy-note {
+	text-align: center;
+	margin-top: 2rem;
+	color: var(--primary-color);
+	background-color: #111;
+	padding: 0.2rem;
+}
+
+#output-msg {
+	text-align: center;
+	margin-top: 2rem;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+footer {
+	text-align: center;
+	margin-top: 14rem;
+}
+
+a,
+img,
+li {
+	display: inline;
+	margin: 0.4rem;
+	width: 30px;
+	height: 30px;
+}
