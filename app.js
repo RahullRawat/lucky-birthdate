@@ -14,26 +14,25 @@ function calculateSum(dob) {
 	return sum;
 }
 
-function checkBirthdateIsLucky() {
-	dob = dateOfBirth.value;
-	const sum = calculateSum(dob);
-
-	// comparing values
-	if (sum && dob && luckyNumber.value) {
-		if (sum % luckyNumber.value === 0) {
-			outputMsg.innerText = "Your Birthdate is lucky 😍";
-		} else {
-			outputMsg.innerText = "Your Birthdate is not lucky 😶";
-		}
+function compareValues(sum, luckyNumber) {
+	if (sum % luckyNumber.value === 0) {
+		outputMsg.innerText = "Your Birthdate is lucky 😍";
 	} else {
-		outputMsg.innerText = "Please enter both fields ";
+		outputMsg.innerText = "Your Birthdate is not lucky 😶";
 	}
 }
 
-// take dateOfBirth & luckyNumber as an input from user ----STEP-1
+function checkBirthdateIsLucky() {
+	dob = dateOfBirth.value;
 
-// replace hyphen from dateOfBirth with null ---STEP-2
-
-// with for loop take dob values one by one and return sum of it ---STEP-3
-
-// now calculate % of sum and luckyNumber and if %===0 print your birthdate is lucky and if %!===0 print your birthdate is not lucky ---STEP-4
+	if (dob === "" || luckyNumber.value === "") {
+		outputMsg.innerText = "Fill the boxes to proceed";
+	} else if (luckyNumber.value === 0) {
+		outputMsg.innerText = "Please Enter Your Lucky Number";
+	} else if (luckyNumber.value < 1) {
+		outputMsg.innerText = "Lucky Number should be greater than 0";
+	} else {
+		const sum = calculateSum(dob);
+		compareValues(sum, luckyNumber.value);
+	}
+}
